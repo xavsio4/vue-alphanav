@@ -1,0 +1,26 @@
+{
+  "private": false,
+  "name": "vue-alphanav",
+  "version": "1.0.0",
+  "description": "Alphabetical Navigation bar displayed using flexbox.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "vue serve Alphanav.vue",
+    "build": "bili --name index --plugin vue --vue.css false"
+  },
+  "keywords": [
+    "vuejs",
+    "navigation",
+    "alphabetical"
+  ],
+  "author": "x. Villamuera",
+  "license": "MIT",
+  "files": [
+    "dist/*"
+  ],
+  "devDependencies": {
+    "bili": "^4.8.1",
+    "rollup-plugin-vue": "^5.1.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
