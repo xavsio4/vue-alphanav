@@ -12,7 +12,7 @@ then import the component where you need it
 
 ```
 <template>
-  <alphanav direction="horizontal" @click="YourMethod"/>
+  <alphanav direction="horizontal" @selected="YourMethod"/>
 </template>
 
 <script>
@@ -23,8 +23,8 @@ components: {
   alphanav
 },
 methods: {
-  YourMethod() {
-    
+  YourMethod(selectedAlpha) {
+    console.log(selectedAlpha.value) //the letter you've clicked on
   }
 }
 }

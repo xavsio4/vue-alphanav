@@ -50,14 +50,14 @@ export default {
   props: {
     direction: {
       type: String,
-      default: "horizontal"
+      default: "vertical"
     } //horizontal or vertical
   },
   methods: {
-    alphanavClick(item, index, event) {
+    alphanavClick(item, index) {
       this.selectedIndex = index;
       this.selectedAlpha = item;
-      this.$emit("click",event);
+      this.$emit("selected",{value: item});
     }
   }
 };

@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "vue-alphanav",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Alphabetical Navigation bar displayed using flexbox.",
   "main": "./dist/index.js",
   "scripts": {
