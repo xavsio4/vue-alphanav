@@ -1,7 +1,7 @@
 # vue-alphanav
 Alphabetical Navigation Bar using flexbox made with Vue.
 
-This bar can be displayed horizontaly or verticaly. Bind any action to the click event. It will adapt to the container you'll put it in. 
+This bar can be displayed horizontaly or verticaly. Bind any action to the click event (@selected). It will adapt to the container you'll put it in. 
 
 in order to install it in your project
 ```
@@ -34,5 +34,11 @@ methods: {
 </style>
 
 ```
+
+## Available props
+
+| Prop                  | Type                        | Required | Default   | Description |
+|-----------------------|-----------------------------|----------|-----------|-------------|
+| direction                | String |     NO     | horizontal      | wether the nav list is displayed vertically or horizontally. Values are: horizontal/vertical|
 
 As it is still under developpement, please be patient for more.
