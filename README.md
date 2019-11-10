@@ -41,4 +41,11 @@ methods: {
 |-----------------------|-----------------------------|----------|-----------|-------------|
 | direction                | String |     NO     | horizontal      | wether the nav list is displayed vertically or horizontally. Values are: horizontal/vertical|
 
+Events
+------
+
+| Name              | Params                       | Info                                                  |
+| ----------------- | ---------------------------- | ----------------------------------------------------- |
+| **@selected**         | *item*: (selectedAlpha in our example) item.value         | Triggered on any letter clicked              |
+
 As it is still under developpement, please be patient for more.
