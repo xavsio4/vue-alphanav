@@ -1,5 +1,6 @@
 # vue-alphanav
 Alphabetical Navigation Bar using flexbox made with Vue.
+![vue-alphanav Gif](demo/demo.gif)
 
 This bar can be displayed horizontaly or verticaly. Bind any action to the click event (@selected). It will adapt to the container you'll put it in. 
 
@@ -50,5 +51,5 @@ Events
 | ----------------- | ---------------------------- | ----------------------------------------------------- |
 | **@selected**         | *item*: (selectedAlpha in our example) item.value         | Triggered on any letter clicked              |
 
-This is the demo in the awesome Codesandbox
+This is the demo in the awesome Codesandbox\
 [![Edit Alphanav Demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/alphanav-demo-uvgk2?fontsize=14)
