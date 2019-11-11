@@ -50,4 +50,5 @@ Events
 | ----------------- | ---------------------------- | ----------------------------------------------------- |
 | **@selected**         | *item*: (selectedAlpha in our example) item.value         | Triggered on any letter clicked              |
 
-As it is still under developpement, please be patient for more.
+This is the demo in the awesome Codesandbox
+[![Edit Alphanav Demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/alphanav-demo-uvgk2?fontsize=14)
