@@ -50,7 +50,7 @@ export default {
   props: {
     direction: {
       type: String,
-      default: "vertical"
+      default: "horizontal"
     } //horizontal or vertical
   },
   methods: {

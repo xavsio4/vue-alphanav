@@ -3,6 +3,8 @@ Alphabetical Navigation Bar using flexbox made with Vue.
 
 This bar can be displayed horizontaly or verticaly. Bind any action to the click event (@selected). It will adapt to the container you'll put it in. 
 
+It seems to me that this is a better navigation, then a default table/pagination, for an address directory, because you will never know on which page is the person you are looking for.
+
 in order to install it in your project
 ```
 npm install vue-alphanav (or npm i vue-alphanav

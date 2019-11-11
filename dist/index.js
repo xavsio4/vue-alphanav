@@ -1,9 +1,11 @@
 /*!
- * vue-alphanav v1.0.0
+ * vue-alphanav v1.0.9
  * (c) x. Villamuera
  * Released under the MIT License.
  */
 'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 //
 //
@@ -35,10 +37,12 @@ var script = {
 
   },
   methods: {
-    alphanavClick: function alphanavClick(item, index, event) {
+    alphanavClick: function alphanavClick(item, index) {
       this.selectedIndex = index;
       this.selectedAlpha = item;
-      this.$emit("click", event);
+      this.$emit("selected", {
+        value: item
+      });
     }
   }
 };
@@ -203,8 +207,8 @@ var __vue_staticRenderFns__ = [];
 
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-edf4d0b4_0", {
-    source: ".vertical[data-v-edf4d0b4]{flex-flow:nowrap;display:flex;flex-wrap:nowrap;flex-direction:column}.horizontal[data-v-edf4d0b4]{flex-flow:nowrap;display:flex;flex-wrap:nowrap;flex-direction:row}.alphanav[data-v-edf4d0b4]{border-radius:2px;background-color:#fcfcfc;margin:14px 0;padding:4px 0;justify-content:space-evenly;list-style-type:none}.alphanav li[data-v-edf4d0b4]{margin:auto;padding:0;flex-shrink:2;flex-basis:auto}.alphanav li a[data-v-edf4d0b4]{margin:auto;padding:2px 4px}.alphanav li a[data-v-edf4d0b4],.alphanav li a[data-v-edf4d0b4]:after,.alphanav li a[data-v-edf4d0b4]:before{transition:all .5s}.alphanav li a.active[data-v-edf4d0b4],.alphanav li a[data-v-edf4d0b4]:hover{color:#fff;background-color:#666;border-radius:5px;margin-top:-4px}.alphanav li a[data-v-edf4d0b4]:hover:after{-webkit-animation:circle 1.5s ease-in forwards}",
+  inject("data-v-5ffa947d_0", {
+    source: ".vertical[data-v-5ffa947d]{flex-flow:nowrap;display:flex;flex-wrap:nowrap;flex-direction:column}.horizontal[data-v-5ffa947d]{flex-flow:nowrap;display:flex;flex-wrap:nowrap;flex-direction:row}.alphanav[data-v-5ffa947d]{border-radius:2px;background-color:#fcfcfc;margin:14px 0;padding:4px 0;justify-content:space-evenly;list-style-type:none}.alphanav li[data-v-5ffa947d]{margin:auto;padding:0;flex-shrink:2;flex-basis:auto}.alphanav li a[data-v-5ffa947d]{margin:auto;padding:2px 4px}.alphanav li a[data-v-5ffa947d],.alphanav li a[data-v-5ffa947d]:after,.alphanav li a[data-v-5ffa947d]:before{transition:all .5s}.alphanav li a.active[data-v-5ffa947d],.alphanav li a[data-v-5ffa947d]:hover{color:#fff;background-color:#666;border-radius:5px;margin-top:-4px}.alphanav li a[data-v-5ffa947d]:hover:after{-webkit-animation:circle 1.5s ease-in forwards}",
     map: undefined,
     media: undefined
   });
@@ -212,7 +216,7 @@ var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__ = "data-v-edf4d0b4";
+var __vue_scope_id__ = "data-v-5ffa947d";
 /* module identifier */
 
 var __vue_module_identifier__ = undefined;
@@ -228,10 +232,29 @@ var Alphanav = normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, createInjector, undefined, undefined);
 
-var index = {
-  install: function install(Vue, options) {
-    Vue.component('alphanav', Alphanav);
-  }
-};
+// Import vue component
 
-module.exports = index;
+function install(Vue) {
+  if (install.installed) return;
+  install.installed = true;
+  Vue.component('Alphanav', Alphanav);
+} // Create module definition for Vue.use()
+
+var plugin = {
+  install: install
+}; // Auto-install when vue is found (eg. in browser via <script> tag)
+
+var GlobalVue = null;
+
+if (typeof window !== 'undefined') {
+  GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+  GlobalVue = global.Vue;
+}
+
+if (GlobalVue) {
+  GlobalVue.use(plugin);
+} // To allow use as module (npm/webpack/etc.) export component
+
+exports.default = Alphanav;
+exports.install = install;
