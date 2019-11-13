@@ -8,7 +8,8 @@ It seems to me that this is a better navigation, then a default table/pagination
 
 in order to install it in your project
 ```
-npm install vue-alphanav (or npm i vue-alphanav
+npm install vue-alphanav (or npm i vue-alphanav)
+
 ```
 
 then import the component where you need it
@@ -43,6 +44,8 @@ methods: {
 | Prop                  | Type                        | Required | Default   | Description |
 |-----------------------|-----------------------------|----------|-----------|-------------|
 | direction                | String |     NO     | horizontal      | wether the nav list is displayed vertically or horizontally. Values are: horizontal/vertical|
+| showClear                | Bolean |     NO     | false      | Show a clear/reset link at the end of the navigation. |
+| clearLinkText                | String |     NO     | 'clr'      | Text of the reset/clear link |
 
 Events
 ------
@@ -50,6 +53,12 @@ Events
 | Name              | Params                       | Info                                                  |
 | ----------------- | ---------------------------- | ----------------------------------------------------- |
 | **@selected**         | *item*: (selectedAlpha in our example) item.value         | Triggered on any letter clicked              |
+| **@clear**         | none        | Clears the selection in the alphanav              |
 
 This is the demo in the awesome Codesandbox\
 [![Edit Alphanav Demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/alphanav-demo-uvgk2?fontsize=14)
+
+
+## Version History
+- 1.1.0 Added clear/reset feature
+- 1.0.9 First Working Version. Demo on Codesandbox

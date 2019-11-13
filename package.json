@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "vue-alphanav",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Alphabetical Navigation bar displayed using flexbox.",
   "main": "./dist/index.js",
   "repository": "git://github.com/xavsio4/vue-alphanav.git",

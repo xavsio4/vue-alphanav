@@ -7,6 +7,9 @@
           :class="(selectedIndex === index) ? 'active' : ''"
         >{{ item }}</a>
       </li>
+      <li v-if="showClear">
+        <a class="alphanav-clear-link" @click="unselect">{{ clearLinkText }}</a>
+      </li>
     </ul>
   </div>
 </template>
@@ -17,6 +20,7 @@ export default {
       actionUrl: "",
       selectedIndex: null, //null or 0 is A is default
       selectedAlpha: null,
+      selectedAlphaMin: null,
       alphaList: [
         "A",
         "B",
@@ -51,13 +55,28 @@ export default {
     direction: {
       type: String,
       default: "horizontal"
-    } //horizontal or vertical
+    }, //horizontal or vertical
+    clearLinkText: {
+      type: String,
+      default: "clr"
+    },
+    showClear: {
+      type: Boolean,
+      default: false
+    }
   },
   methods: {
     alphanavClick(item, index) {
       this.selectedIndex = index;
       this.selectedAlpha = item;
-      this.$emit("selected",{value: item});
+      this.selectedAlphaMin = item.toLowerCase().trim();
+      this.$emit("selected", { value: item });
+    },
+    unselect() {
+      this.selectedIndex = null;
+      this.selectedAlpha = null;
+      this.selectedAlphaMin = null;
+      this.$emit("clear");
     }
   }
 };
@@ -113,5 +132,9 @@ export default {
 
 .alphanav li a:hover:after {
   -webkit-animation: circle 1.5s ease-in forwards;
+}
+
+.alphanav-clear-link {
+  color: #aaa;
 }
 </style>
