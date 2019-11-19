@@ -1,14 +1,15 @@
 {
   "private": false,
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "name": "vue-alphanav",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Alphabetical Navigation bar displayed using flexbox.",
   "main": "./dist/index.js",
   "repository": "git://github.com/xavsio4/vue-alphanav.git",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:npm": "vue-cli-service build --target lib --name Alphanav ./src/Alphanav.vue"
+    "build-bundle": "vue-cli-service build --target lib --name Alphanav ./src/Alphanav.vue"
   },
   "keywords": [
     "vuejs",
