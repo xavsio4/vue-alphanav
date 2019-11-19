@@ -22,7 +22,18 @@
   ],
   "dependencies": {
     "bili": "^4.8.1",
+    "core-js": "^3.4.1",
     "rollup-plugin-vue": "^5.1.2",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.6.10"
   }
 }

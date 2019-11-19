@@ -16,7 +16,13 @@ then import the component where you need it
 
 ```
 <template>
-  <alphanav direction="horizontal" @selected="YourMethod"/>
+  <alphanav 
+  showClear="true" 
+  clearLinkText="reset"
+  direction="horizontal" 
+  @clear="clear" 
+  @selected="selectedAlpha"></alphanav>
+
 </template>
 
 <script>
@@ -29,6 +35,9 @@ components: {
 methods: {
   YourMethod(selectedAlpha) {
     console.log(selectedAlpha.value) //the letter you've clicked on
+  }
+  clear() {
+    //your actions when clear
   }
 }
 }
