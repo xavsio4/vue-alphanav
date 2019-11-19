@@ -1,15 +1,23 @@
 {
   "private": false,
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
   "name": "vue-alphanav",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Alphabetical Navigation bar displayed using flexbox.",
-  "main": "./dist/index.js",
-  "repository": "git://github.com/xavsio4/vue-alphanav.git",
+  "main": "dist/vue-alphanav.umd.js",
+  "unpkg": "dist/vue-alphanav.umd.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavsio4/vue-alphanav.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name Alphanav ./src/Alphanav.vue"
+    "postpublish": "npm publish --ignore-scripts --@xavsio4:registry='http://registry.npmjs.org'",
+    "build-bundle": "vue-cli-service build --target lib --name vue-alphanav ./src/Alphanav.vue",
+    "build:npm": "vue-cli-service build --target lib --name vue-alphanav src/Alphanav.vue"
   },
   "keywords": [
     "vuejs",
@@ -18,13 +26,15 @@
   ],
   "author": "x. Villamuera",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xavsio4/vue-alphanav/issues"
+  },
+  "homepage": "https://github.com/xavsio4/vue-alphanav#readme",
   "files": [
     "dist/*"
   ],
   "dependencies": {
-    "bili": "^4.8.1",
     "core-js": "^3.4.1",
-    "rollup-plugin-vue": "^5.1.2",
     "vue": "^2.6.10"
   },
   "devDependencies": {
