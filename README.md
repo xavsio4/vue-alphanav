@@ -16,13 +16,18 @@ then import the component where you need it
 
 ```
 <template>
+<div>
   <alphanav 
-  showClear="true" 
+  :showClear=true 
   clearLinkText="reset"
   direction="horizontal" 
   @clear="clear" 
   @selected="selectedAlpha"></alphanav>
 
+  <alphanav :alphaList="['A-C','D-E','F-H','I-K','L-N','O-Q','R-T','U-W','X-Z']" />
+
+  <>
+</div>
 </template>
 
 <script>
@@ -55,6 +60,7 @@ methods: {
 | direction                | String |     NO     | horizontal      | wether the nav list is displayed vertically or horizontally. Values are: horizontal/vertical|
 | showClear                | Bolean |     NO     | false      | Show a clear/reset link at the end of the navigation. |
 | clearLinkText                | String |     NO     | 'clr'      | Text of the reset/clear link |
+| alphaList                | Array |     NO     | 'A','B','C',....'Z'      | list of alphanav links. It can be anything to be displayed as long as it is in an Array |
 
 Events
 ------
@@ -69,5 +75,6 @@ This is the demo in the awesome Codesandbox\
 
 
 ## Version History
+- 1.2.0 Added alphaList as a property to change the nav links
 - 1.1.0 Added clear/reset feature
 - 1.0.9 First Working Version. Demo on Codesandbox

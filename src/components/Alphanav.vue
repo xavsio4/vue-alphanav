@@ -1,11 +1,12 @@
 <template>
   <div>
     <ul :class="direction + ' alphanav'">
-      <li v-for="(item,index) in alphaList" :key="item">
+      <li v-for="(item, index) in alphaList" :key="item">
         <a
-          @click="alphanavClick(item,index,$event)"
-          :class="(selectedIndex === index) ? 'active' : ''"
-        >{{ item }}</a>
+          @click="alphanavClick(item, index, $event)"
+          :class="selectedIndex === index ? 'active' : ''"
+          >{{ item }}</a
+        >
       </li>
       <li v-if="showClear">
         <a class="alphanav-clear-link" @click="unselect">{{ clearLinkText }}</a>
@@ -20,8 +21,25 @@ export default {
       actionUrl: "",
       selectedIndex: null, //null or 0 is A is default
       selectedAlpha: null,
-      selectedAlphaMin: null,
-      alphaList: [
+      selectedAlphaMin: null
+    };
+  },
+  props: {
+    direction: {
+      type: String,
+      default: "horizontal"
+    }, //horizontal or vertical
+    clearLinkText: {
+      type: String,
+      default: "clr"
+    },
+    showClear: {
+      type: Boolean,
+      default: false
+    },
+    alphaList: {
+      type: Array,
+      default: () => [
         "A",
         "B",
         "C",
@@ -49,20 +67,6 @@ export default {
         "Y",
         "Z"
       ]
-    };
-  },
-  props: {
-    direction: {
-      type: String,
-      default: "horizontal"
-    }, //horizontal or vertical
-    clearLinkText: {
-      type: String,
-      default: "clr"
-    },
-    showClear: {
-      type: Boolean,
-      default: false
     }
   },
   methods: {
@@ -80,14 +84,14 @@ export default {
     }
   }
 };
-</script> 
+</script>
 
 <style scoped>
 .vertical {
   flex-flow: nowrap;
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: column;
+  flex-direction: column!important;
 }
 .horizontal {
   flex-flow: nowrap;

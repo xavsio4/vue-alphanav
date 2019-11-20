@@ -4,7 +4,7 @@
     "registry": "http://registry.npmjs.org/"
   },
   "name": "vue-alphanav",
-  "version": "1.1.14",
+  "version": "1.2.0",
   "description": "Alphabetical Navigation bar displayed using flexbox.",
   "main": "dist/vue-alphanav.umd.js",
   "unpkg": "dist/vue-alphanav.umd.min.js",

@@ -1,6 +1,13 @@
 <template>
   <div id="app">
     <alphanav :showClear="true" clearLinkText="reset" direction="horizontal" @selected="selected" @clear="clearAlpha"/>
+    <alphanav 
+    :showClear="true" 
+    clearLinkText="reset" 
+    direction="horizontal" 
+    @selected="selected"
+    :alphaList="['A-C','D-E','F-H','I-K','L-N','O-Q','R-T','U-W','X-Z']" 
+    @clear="clearAlpha"/>
     <h2 align="center">{{ selectedAlpha }}</h2>
     <div class="selected-letter">&nbsp;{{ selectedAlpha}} {{ selectedAlpha.toLowerCase().trim() }}</div>
   </div>
