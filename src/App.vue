@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Alphanav from './Alphanav.vue'
+import Alphanav from './components/Alphanav.vue'
 
 export default {
   name: 'app',
