@@ -4,7 +4,7 @@
     "registry": "http://registry.npmjs.org/"
   },
   "name": "vue-alphanav",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Alphabetical Navigation bar displayed using flexbox.",
   "main": "dist/vue-alphanav.umd.js",
   "unpkg": "dist/vue-alphanav.umd.min.js",
@@ -17,7 +17,7 @@
     "build": "vue-cli-service build",
     "postpublish": "npm publish --ignore-scripts --@xavsio4:registry='http://registry.npmjs.org'",
     "build-bundle": "vue-cli-service build --target lib --name vue-alphanav ./src/Alphanav.vue",
-    "build:npm": "vue-cli-service build --target lib --name vue-alphanav src/Alphanav.vue"
+    "build:npm": "vue-cli-service build --target lib --name vue-alphanav ./src/Alphanav.vue"
   },
   "keywords": [
     "vuejs",
@@ -34,6 +34,7 @@
     "dist/*"
   ],
   "dependencies": {
+    "acorn": "^7.1.0",
     "core-js": "^3.4.1",
     "vue": "^2.6.10"
   },

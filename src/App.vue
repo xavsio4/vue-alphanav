@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <alphanav showClear="false" clearLinkText="reset" direction="horizontal" @selected="selected" @clear="clearAlpha"/>
+    <alphanav :showClear="true" clearLinkText="reset" direction="horizontal" @selected="selected" @clear="clearAlpha"/>
     <h2 align="center">{{ selectedAlpha }}</h2>
     <div class="selected-letter">&nbsp;{{ selectedAlpha}} {{ selectedAlpha.toLowerCase().trim() }}</div>
   </div>
